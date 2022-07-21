@@ -3,7 +3,7 @@ package aula7;
 import java.lang.Math;
 import java.lang.reflect.Constructor;
 
-public class Eqxn extends Delta {
+public class Eqxn extends Equacao {
     double xn;
     double xp;
 
@@ -26,15 +26,15 @@ public class Eqxn extends Delta {
     }
     //#endregion
 
-    public double calculaXn(double delta, double a, double b){
-        xn = (-b-Math.sqrt(delta))/2*a;
+    public double calculaXn(double delta){
+        xn = (-super.getB()-Math.sqrt(delta))/2*super.getA();
         return xn;
     }
 
     
 
-    public double calculaXp(double delta, double a, double b){
-        xp = (-b+Math.sqrt(delta))/2*a;
+    public double calculaXp(double delta){
+        xp = (-super.getB()+Math.sqrt(delta))/2*super.getA();
         return xp;
     }
 }

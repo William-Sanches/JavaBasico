@@ -14,7 +14,7 @@ public class Delta extends Equacao {
     // #endregion
 
     public double calculaDelta(double a, double b, double c) {
-        delta = (b * b) - 4 * a * c;
+        delta = (super.getB() * super.getB()) - 4 * super.getA() * super.getC();
         return delta;
     }
 
